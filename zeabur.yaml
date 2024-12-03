@@ -1,0 +1,18 @@
+services:
+  - name: performance-frontend
+    type: web
+    env:
+      - name: NODE_ENV
+        value: production
+    buildCommand: npm run build
+    startCommand: npm start
+    port: 3000
+
+  - name: performance-server
+    type: web
+    env:
+      - name: NODE_ENV
+        value: production
+    buildCommand: npm install
+    startCommand: node src/performance-server/server.js
+    port: 3001 

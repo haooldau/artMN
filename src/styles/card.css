@@ -1,0 +1,21 @@
+/* 3D 翻转效果所需的样式 */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* 确保翻转时背面是隐藏的 */
+.rotate-y-180 .backface-hidden {
+  backface-visibility: hidden;
+} 
