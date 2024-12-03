@@ -11,13 +11,8 @@ const app = express();
 
 // 启用 CORS 和 JSON 解析
 app.use(cors({
-  origin: [
-    'http://localhost:3000',
-    'https://你的zeabur域名'
-  ],
-  credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
+  origin: '*',  // 允许所有来源，简化开发
+  credentials: true
 }));
 app.use(express.json());
 
